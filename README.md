@@ -1,2 +1,2 @@
 # SimpleECommerceBackend
-A simple e-commerce backend to manage customer, oder.
+A simple e-commerce backend to manage customer, order.
