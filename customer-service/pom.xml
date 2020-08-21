@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.puzzlemusa</groupId>
-	<artifactId>customer</artifactId>
+	<artifactId>customer-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>customer</name>
+	<name>customer-service</name>
 	<description>Manages customer information.</description>
 
 	<properties>

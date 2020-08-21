@@ -3,7 +3,7 @@ services:
   customer-service:
     container_name: customer-service
     image: customer-service
-    build: ./customer
+    build: ./customer-service
     ports:
     - "8080:8080"
     depends_on:
