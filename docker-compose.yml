@@ -7,8 +7,9 @@ services:
     ports:
     - "8080:8080"
     depends_on:
-      - dev-postgres
-  dev-postgres:
+      - customer-db
+  customer-db:
+    container_name: customer-db
     image: postgres
     ports:
     - "5432:5432"
@@ -16,3 +17,20 @@ services:
       - POSTGRES_PASSWORD=1234
       - POSTGRES_USER=postgres
       - POSTGRES_DB=CustomerDB
+  order-service:
+    container_name: order-service
+    image: order-service
+    build: ./order-service
+    ports:
+    - "8081:8081"
+    depends_on:
+      - order-db
+  order-db:
+    container_name: order-db
+    image: postgres
+    ports:
+    - "5433:5432"
+    environment:
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=OrderDB
