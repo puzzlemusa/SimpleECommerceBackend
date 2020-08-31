@@ -1,0 +1,4 @@
+// in opt/kafka/bin
+create topic: kafka-topics.sh --create --zookeeper dev-zookeeper:2181 --replication-factor 1 --partitions 1 --topic order
+list topic: kafka-topics.sh --list --zookeeper dev-zookeeper:2181
+show event in console: kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic order --from-beginning
